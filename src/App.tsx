@@ -1,10 +1,10 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
-import { userAtom, isLoggedInAtom } from './atoms/userAtom';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { userAtom, isLoggedInAtom } from "atoms/userAtom";
 
-import Home from './pages/Home';
-import KaKaoLogin from './pages/KaKaoLogin';
-import MyPage from './pages/MyPage';
+import Home from "pages/Home";
+import KaKaoLogin from "pages/KaKaoLogin";
+import MyPage from "pages/MyPage";
 
 function App() {
   const setUser = useSetRecoilState(userAtom);

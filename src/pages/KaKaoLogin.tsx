@@ -1,17 +1,17 @@
-import { useNavigate } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
-import { isLoggedInAtom } from '../atoms/userAtom';
+import { useNavigate } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { isLoggedInAtom } from "atoms/userAtom";
 
 export default function KaKaoLogin() {
   const navigate = useNavigate();
   const setIsLoggedIn = useSetRecoilState(isLoggedInAtom);
   const params = new URL(document.URL).searchParams;
-  const code = params.get('code');
+  const code = params.get("code");
   if (!code) {
-    () => navigate('/');
+    () => navigate("/");
   } else {
     setIsLoggedIn(true);
-    navigate('/MyPage');
+    navigate("/MyPage");
   }
   return <div>Login 중입니다.. </div>;
 }
